@@ -1,0 +1,112 @@
+[gd_scene load_steps=20 format=3 uid="uid://bleyumase6xi4"]
+
+[ext_resource type="Texture2D" uid="uid://fq8cmrcnflj" path="res://Assets/enemy-death/enemy-death-1.png" id="1_db1rq"]
+[ext_resource type="Texture2D" uid="uid://dblspeifu8q60" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0000_Layer-1.png" id="1_ug811"]
+[ext_resource type="Texture2D" uid="uid://direfatxipst2" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0001_Layer-2.png" id="2_50xvu"]
+[ext_resource type="Texture2D" uid="uid://dptmav3lpeequ" path="res://Assets/enemy-death/enemy-death-2.png" id="2_bkdya"]
+[ext_resource type="Texture2D" uid="uid://bs5t30cppmopc" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0003_Layer-4.png" id="3_4fg4w"]
+[ext_resource type="Texture2D" uid="uid://dfd8txyaw6rbt" path="res://Assets/enemy-death/enemy-death-3.png" id="3_8elg6"]
+[ext_resource type="Texture2D" uid="uid://cqyuic73ywu8y" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0004_Layer-5.png" id="4_lsktt"]
+[ext_resource type="Texture2D" uid="uid://wwpkbjq8tymv" path="res://Assets/enemy-death/enemy-death-4.png" id="4_xeywk"]
+[ext_resource type="Texture2D" uid="uid://cfxfua084ki77" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0005_Layer-6.png" id="5_1go7a"]
+[ext_resource type="Texture2D" uid="uid://bcjdkvh6hitnj" path="res://Assets/enemy-death/enemy-death-5.png" id="5_gj3le"]
+[ext_resource type="Texture2D" uid="uid://brb3h3j17ipsq" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0006_Layer-7.png" id="6_fjggd"]
+[ext_resource type="Texture2D" uid="uid://d3gyn30i6w54u" path="res://Assets/enemy-death/enemy-death-6.png" id="6_wkmfb"]
+[ext_resource type="Texture2D" uid="uid://hyi2b43lxj8x" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0007_Layer-8.png" id="7_dh6ty"]
+[ext_resource type="Texture2D" uid="uid://c3lnjt0lqfsjb" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/sunny-dragon/sprites/_0008_Layer-9.png" id="8_6p5q3"]
+
+[sub_resource type="GDScript" id="GDScript_8qj6s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_so26a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_db1rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bkdya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8elg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xeywk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gj3le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wkmfb")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ug811")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_50xvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4fg4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lsktt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1go7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fjggd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fjggd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dh6ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6p5q3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hman5"]
+size = Vector2(2089, 1216.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05jlu"]
+size = Vector2(15, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5scvh"]
+size = Vector2(1106.25, 443.5)
+
+[node name="Dragons" type="Node2D"]
+script = SubResource("GDScript_8qj6s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(63.5, -123)
+scale = Vector2(4.83854, 3.94318)
+sprite_frames = SubResource("SpriteFrames_so26a")
+animation = &"Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(149, 0)
+shape = SubResource("RectangleShape2D_hman5")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(1, 4)
+shape = SubResource("RectangleShape2D_05jlu")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(115, -66)
+shape = SubResource("RectangleShape2D_5scvh")
