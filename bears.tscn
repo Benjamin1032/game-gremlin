@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://3ecbrefp8c1p"]
+
+[ext_resource type="Texture2D" uid="uid://cbry53l7cn4gg" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bear/walk/bear-walk1.png" id="1_dbg4c"]
+[ext_resource type="Texture2D" uid="uid://b5n0af13u64w" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bear/walk/bear-walk2.png" id="2_1q0ef"]
+[ext_resource type="Texture2D" uid="uid://b1l1cft1q8yvf" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bear/walk/bear-walk3.png" id="3_3yc4o"]
+[ext_resource type="Texture2D" uid="uid://bi46fie8jeapw" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/SunnyLand Enemies Pack/bear/walk/bear-walk4.png" id="4_pagc3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rerab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dbg4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1q0ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3yc4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pagc3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Bears" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(402.25, 186.5)
+scale = Vector2(17.5833, 22.0159)
+sprite_frames = SubResource("SpriteFrames_rerab")
+animation = &"walk"
+frame = 2
+frame_progress = 0.938408

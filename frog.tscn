@@ -102,12 +102,13 @@ animations = [{
 radius = 249.724
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omcqm"]
-size = Vector2(38.5, 18.125)
+size = Vector2(38.5, 14.0313)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_034ye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(14, 2.5)
 shape = SubResource("RectangleShape2D_0hgs3")
 
@@ -120,19 +121,20 @@ animation = &"Idle"
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+visible = false
 position = Vector2(-1, -8)
 shape = SubResource("CircleShape2D_cn22q")
 
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(9, 6.0625)
+position = Vector2(12, 8.01563)
 shape = SubResource("RectangleShape2D_omcqm")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(13, 3)
+position = Vector2(14, -7.96875)
 shape = SubResource("RectangleShape2D_omcqm")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6a3p8y1ascmw"]
+[gd_scene load_steps=9 format=3 uid="uid://b6a3p8y1ascmw"]
 
 [ext_resource type="Texture2D" uid="uid://b2bpsdhrm6i7f" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="1_i0d63"]
 [ext_resource type="Script" path="res://BG.gd" id="1_o12f8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cid7kclflf0o" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/plant-house.png" id="4_fegnm"]
 [ext_resource type="Texture2D" uid="uid://baunq4a613cmi" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Lava Place/Preview.png" id="6_dc5kp"]
 [ext_resource type="Texture2D" uid="uid://c16ec7e747wgf" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/ENVIRONMENT/Background/mid-layer-a.png" id="7_dynwj"]
+[ext_resource type="Texture2D" uid="uid://d4gh6n4g5gev0" path="res://Assets/Other Assets/Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Colorful Environment/Preview.png" id="8_3aa8x"]
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_o12f8")
@@ -59,6 +60,11 @@ texture = ExtResource("7_dynwj")
 position = Vector2(2130, 2077.5)
 scale = Vector2(10.1991, 6.0625)
 texture = ExtResource("6_dc5kp")
+
+[node name="Preview2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(2759, 4038)
+scale = Vector2(22.2813, 13.9545)
+texture = ExtResource("8_3aa8x")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 

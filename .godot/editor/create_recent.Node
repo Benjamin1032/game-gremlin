@@ -1,6 +1,6 @@
 CollisionShape2D
-Area2D
 AnimatedSprite2D
+Area2D
 AnimatableBody2D
 Label
 CanvasLayer
